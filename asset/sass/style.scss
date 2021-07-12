@@ -1,0 +1,20 @@
+@import "./var_colors_and_fonts.scss";
+@import "./module/reset.scss";
+
+/*Fin reset*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+}
+
+.header {
+
+    h1 {
+        font-family: $fontShrikhand;
+        font-size: 1.5rem;
+    }
+}
