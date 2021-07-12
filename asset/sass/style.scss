@@ -9,12 +9,86 @@
 
 html, body {
     font-size: 16px;
+    font-family: $fontRoboto
+
 }
 
 .header {
 
-    h1 {
-        font-family: $fontShrikhand;
-        font-size: 1.5rem;
+    div {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 10px 0;
+
+        img {
+            width: 160px;
+            height: auto;
+        }
+    }
+}
+
+.sectionReserve {
+    border: 1px solid red;
+    border-top: 3px solid #cfcfcf;
+    header {
+        display: flex;
+        justify-content: center;
+        background-color: #eaeaea;
+        padding: 0.1rem;
+
+        .positionIcon {
+            font-size: .8rem;
+            padding: .6rem .4rem .6rem 0rem;
+            margin-left: 3.5rem;
+        }
+
+        input {
+            border: none;
+            padding: .6rem .4rem .6rem .3rem;
+            background-color: transparent;
+            font-size: 1rem;
+            color: #404040;
+            font-weight: 600;
+            font-family: $fontRoboto;
+
+        }
+
+    }
+
+    .sectionReserve__div {
+        border: 1px solid blue;
+        background-color: #f6f6f6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-family: $fontRoboto;
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 2rem 3.3rem 0.5rem 3.3rem;
+            text-align: center;
+        }
+
+        p {
+            font-family: $fontRoboto;
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: #7d7d7d;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        button {
+            padding: 15px;
+            border-radius: 2rem;
+            background: linear-gradient(45deg, $secondaryColorPink, $primaryColorPurple);
+            border: none;
+            color: #FFF;
+            font-weight: bold;
+            font-family: $fontRoboto;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
     }
 }
