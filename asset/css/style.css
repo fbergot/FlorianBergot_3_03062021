@@ -128,4 +128,12 @@ html, body {
   margin-bottom: 30px;
 }
 
+.sectionOperation {
+  border: 1px solid black;
+  padding: 1rem;
+}
+.sectionOperation h1 {
+  font-size: 1.2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
