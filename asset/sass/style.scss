@@ -28,7 +28,7 @@ html, body {
 }
 
 .sectionReserve {
-    border: 1px solid red;
+    // border: 1px solid red;
     border-top: 3px solid #cfcfcf;
     header {
         display: flex;
@@ -40,6 +40,7 @@ html, body {
             font-size: .8rem;
             padding: .6rem .4rem .6rem 0rem;
             margin-left: 3.5rem;
+            margin-top: 2px;
         }
 
         input {
@@ -56,7 +57,7 @@ html, body {
     }
 
     .sectionReserve__div {
-        border: 1px solid blue;
+        // border: 1px solid blue;
         background-color: #f6f6f6;
         display: flex;
         flex-direction: column;
@@ -80,34 +81,192 @@ html, body {
         }
 
         button {
-            padding: 15px;
+            padding: .9em 1.2em .9em 1.2em;
             border-radius: 2rem;
-            background: linear-gradient(45deg, $secondaryColorPink, $primaryColorPurple);
+            background: linear-gradient(170deg, $secondaryColorPink, $primaryColorPurple);
             border: none;
             color: #FFF;
-            font-weight: bold;
+            font-weight: 400;
             font-family: $fontRoboto;
             font-size: 1rem;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
     }
 }
 
 .sectionOperation {
-    border: 1px solid black;
-    padding: 1rem;
+    // border: 1px solid black;
+    padding: 1.5rem;
+    margin-top: 20px;
+
     h1 {
-        font-size: 1.2rem;
-        
+        font-size: 1.4rem;
+        font-weight: bold;       
+    }
+
+    .sectionOperation__container {
+        display: flex;
+        flex-direction: column;
+      
     }
 }
 
-.sectionRestaurant {
-    h1 {
+.sectionOperation__bubble {
+    position: relative;
+    padding: 1em 0;
+    border-radius: 19px;
+    margin-top: 20px;
+    background-color: #f6f6f6;
 
+    .bubble__number {
+        position: absolute;
+        left: -10px;
+        top: 22px;
+        display: inline;
+        border-radius: 1rem;
+        font-size: .9rem;
+        text-align: center;
+        color: #FFF;
+        padding: 0.25rem 0.45rem;
+        background-color: $primaryColorPurple;
+    }
+    
+    .bubble__container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        .bubble__icon {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            color: rgba(126,126,126,1);
+            margin-right: 20px;
+            margin-left: 20px;
+
+            &--purple {
+                color: $primaryColorPurple;
+            }
+        }
+
+        p {
+            font-weight: bold;
+            margin-top: .3rem;
+        }
+    }
+
+    &--purple {
+        background-color: #f5edff;
+    }
+}
+
+
+// -------------------sectionRestaurant
+
+.sectionRestaurant {
+    margin-top: 20px;
+    padding: 2rem 1.5rem 3.5rem 1.5rem;
+    background-color: #f6f6f6;
+
+    h1 {
+        font-size: 1.4rem;
+        padding: 1rem 0 1rem 0;
+        font-weight: bold; 
+    }
+    
+    &ContainerCard {
+        // border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    
+    
+    &__Card {
+        // border: 1px solid red;
+        width: 100%;
+        height: 200px;
+        border-radius: 1rem;
+        background-color: #FFF;
+        
+        a {
+            text-decoration: none;
+
+        }
+
+        .containerImgCard {
+            height: 70%;
+            border-radius: 1rem 1rem 0 0;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem 1rem 0 0;
+
+            }
+        }
+
+        .containerTextCard {
+            display: flex;
+            justify-content: space-between;
+            padding: .7rem .5rem 0 .5rem;
+            color: #000;
+
+            h2 {
+                font-weight: bold;
+            }
+
+            i {
+                font-size: 1.2rem;
+                margin: 0.2rem 10px 0 0;
+
+            }
+            
+            .heartFull {
+                display: none;
+            }
+        }
+
+        p {
+            padding: 0 0 0 .5rem;
+            color: #000;
+            font-weight: 100;
+        }
+    }   
+}
+
+.footer {
+    background-color: #353535;
+    color: #FFF;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+
+    h2 {
+        font-size: 1.2rem;
+        font-family: $fontShrikhand;
+        padding: .5rem 0 1rem 0;
     }
 
     div {
+        display: flex;
+        flex-direction: column;
         
+        a {
+            color: #FFF;
+            padding: .2rem;
+            text-decoration: none;
+
+            span {
+                padding-right: 0.5rem;
+            }
+            
+            .footer__span2 {
+                padding-right: 3px;
+            }
+        }
+
+        i {
+            font-size: .8rem;
+        }
     }
 }

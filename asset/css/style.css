@@ -71,7 +71,6 @@ html, body {
 }
 
 .sectionReserve {
-  border: 1px solid red;
   border-top: 3px solid #cfcfcf;
 }
 .sectionReserve header {
@@ -84,6 +83,7 @@ html, body {
   font-size: 0.8rem;
   padding: 0.6rem 0.4rem 0.6rem 0rem;
   margin-left: 3.5rem;
+  margin-top: 2px;
 }
 .sectionReserve header input {
   border: none;
@@ -95,7 +95,6 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 .sectionReserve .sectionReserve__div {
-  border: 1px solid blue;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
@@ -117,23 +116,155 @@ html, body {
   padding-bottom: 2rem;
 }
 .sectionReserve .sectionReserve__div button {
-  padding: 15px;
+  padding: 0.9em 1.2em 0.9em 1.2em;
   border-radius: 2rem;
-  background: linear-gradient(45deg, #FF79DA, #9356DC);
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   border: none;
   color: #FFF;
-  font-weight: bold;
+  font-weight: 400;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .sectionOperation {
-  border: 1px solid black;
-  padding: 1rem;
+  padding: 1.5rem;
+  margin-top: 20px;
 }
 .sectionOperation h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.sectionOperation .sectionOperation__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionOperation__bubble {
+  position: relative;
+  padding: 1em 0;
+  border-radius: 19px;
+  margin-top: 20px;
+  background-color: #f6f6f6;
+}
+.sectionOperation__bubble .bubble__number {
+  position: absolute;
+  left: -10px;
+  top: 22px;
+  display: inline;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #FFF;
+  padding: 0.25rem 0.45rem;
+  background-color: #9356DC;
+}
+.sectionOperation__bubble .bubble__container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.sectionOperation__bubble .bubble__container .bubble__icon {
+  padding: 0.5rem;
   font-size: 1.2rem;
+  color: #7e7e7e;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.sectionOperation__bubble .bubble__container .bubble__icon--purple {
+  color: #9356DC;
+}
+.sectionOperation__bubble .bubble__container p {
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+.sectionOperation__bubble--purple {
+  background-color: #f5edff;
+}
+
+.sectionRestaurant {
+  margin-top: 20px;
+  padding: 2rem 1.5rem 3.5rem 1.5rem;
+  background-color: #f6f6f6;
+}
+.sectionRestaurant h1 {
+  font-size: 1.4rem;
+  padding: 1rem 0 1rem 0;
+  font-weight: bold;
+}
+.sectionRestaurantContainerCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.sectionRestaurant__Card {
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem;
+  background-color: #FFF;
+}
+.sectionRestaurant__Card a {
+  text-decoration: none;
+}
+.sectionRestaurant__Card .containerImgCard {
+  height: 70%;
+  border-radius: 1rem 1rem 0 0;
+}
+.sectionRestaurant__Card .containerImgCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.sectionRestaurant__Card .containerTextCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0.5rem 0 0.5rem;
+  color: #000;
+}
+.sectionRestaurant__Card .containerTextCard h2 {
+  font-weight: bold;
+}
+.sectionRestaurant__Card .containerTextCard i {
+  font-size: 1.2rem;
+  margin: 0.2rem 10px 0 0;
+}
+.sectionRestaurant__Card .containerTextCard .heartFull {
+  display: none;
+}
+.sectionRestaurant__Card p {
+  padding: 0 0 0 0.5rem;
+  color: #000;
+  font-weight: 100;
+}
+
+.footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+.footer h2 {
+  font-size: 1.2rem;
+  font-family: "Shrikhand", cursive;
+  padding: 0.5rem 0 1rem 0;
+}
+.footer div {
+  display: flex;
+  flex-direction: column;
+}
+.footer div a {
+  color: #FFF;
+  padding: 0.2rem;
+  text-decoration: none;
+}
+.footer div a span {
+  padding-right: 0.5rem;
+}
+.footer div a .footer__span2 {
+  padding-right: 3px;
+}
+.footer div i {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
