@@ -5,7 +5,8 @@
 @import "./HTML_elements/footer.scss";
 
 // mixin
-
+@import "./HTML_elements/mixin/header.scss";
+@import "./mixin/mixinButton.scss";
 
 /*Fin reset et html elements*/
 
@@ -21,17 +22,7 @@ html, body {
 
 
 .header {
-
-    div {
-        display: flex;
-        justify-content: center;
-        padding: 20px 0 10px 0;
-
-        img {
-            width: 160px;
-            height: auto;
-        }
-    }
+    @include header;
 }
 
 // -------------------sectionReserve
@@ -89,17 +80,8 @@ html, body {
             padding-bottom: 2rem;
         }
 
-        button {
-            padding: .9em 1.2em .9em 1.2em;
-            border-radius: 2rem;
-            background: linear-gradient(170deg, $secondaryColorPink, $primaryColorPurple);
-            border: none;
-            color: #FFF;
-            font-weight: 400;
-            font-family: $fontRoboto;
-            font-size: 1rem;
-            margin-bottom: 40px;
-        }
+        @include button(.9em,.9em);
+        
     }
 }
 

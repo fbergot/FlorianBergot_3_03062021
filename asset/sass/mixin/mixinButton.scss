@@ -1,0 +1,21 @@
+@mixin button ($paddingLeft, $paddingRight) {
+
+    button {
+        padding: .9em 1.2em .9em 1.2em;
+        border-radius: 2rem;
+        background: linear-gradient(170deg, $secondaryColorPink, $primaryColorPurple);
+        border: none;
+        color: #FFF;
+        font-weight: 400;
+        font-family: $fontRoboto;
+        font-size: 1rem;
+        margin-bottom: 40px;
+        padding-left: #{$paddingLeft};
+        padding-right: #{$paddingRight};
+        
+        &:hover {
+            cursor: pointer;
+        }
+        }
+
+}

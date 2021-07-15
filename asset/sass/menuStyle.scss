@@ -4,6 +4,9 @@
 // HTML Elements
 @import "./HTML_elements/footer.scss";
 
+// mixin
+@import "./HTML_elements/mixin/header.scss";
+@import "../sass/mixin/mixinButton.scss";
 
 /*Fin reset et html elements*/
 
@@ -28,16 +31,7 @@ html, body {
         transform: translateY(-30%);
     }
 
-    div {
-        display: flex;
-        justify-content: center;
-        padding: 20px 0 10px 0;
-
-        img {
-            width: 160px;
-            height: auto;
-        }
-    }
+    @include header;
 }
 
 .imageSection {
@@ -191,20 +185,20 @@ html, body {
     justify-content: center;
     background-color: $greyColor;
 
+    @include button(40px, 40px);
+    // button {
+    //     padding: .9em 1.2em .9em 1.2em;
+    //     border-radius: 2rem;
+    //     background: linear-gradient(170deg, $secondaryColorPink, $primaryColorPurple);
+    //     border: none;
+    //     color: #FFF;
+    //     font-weight: 400;
+    //     font-family: $fontRoboto;
+    //     font-size: 1rem;
+    //     margin-bottom: 40px;
 
-    button {
-        padding: .9em 1.2em .9em 1.2em;
-        border-radius: 2rem;
-        background: linear-gradient(170deg, $secondaryColorPink, $primaryColorPurple);
-        border: none;
-        color: #FFF;
-        font-weight: 400;
-        font-family: $fontRoboto;
-        font-size: 1rem;
-        margin-bottom: 40px;
-
-        //modificateur
-        padding-left: 40px;
-        padding-right: 40px;
-        }
+    //     //modificateur
+    //     padding-left: 40px;
+    //     padding-right: 40px;
+    //     }
 }

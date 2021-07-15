@@ -1,0 +1,14 @@
+ @mixin header {
+     
+     div {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0 10px 0;
+    
+            img {
+                width: 160px;
+                height: auto;
+            }
+        }
+ }
+ 
