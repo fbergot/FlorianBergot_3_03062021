@@ -2,8 +2,10 @@
 @import "./module/reset.scss";
 
 // HTML Elements
-@import "./HTML_elements/header.scss";
 @import "./HTML_elements/footer.scss";
+
+// mixin
+
 
 /*Fin reset et html elements*/
 
@@ -16,6 +18,23 @@ html, body {
     font-family: $fontRoboto
 
 }
+
+
+.header {
+
+    div {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 10px 0;
+
+        img {
+            width: 160px;
+            height: auto;
+        }
+    }
+}
+
+// -------------------sectionReserve
 
 .sectionReserve {
     // border: 1px solid red;
@@ -84,6 +103,8 @@ html, body {
     }
 }
 
+// --------------------sectionOperation
+
 .sectionOperation {
     // border: 1px solid black;
     padding: 1.5rem;
@@ -149,7 +170,6 @@ html, body {
     }
 }
 
-
 // -------------------sectionRestaurant
 
 .sectionRestaurant {
@@ -205,17 +225,19 @@ html, body {
 
             h2 {
                 font-weight: bold;
+                color: #000;
             }
 
             i {
                 font-size: 1.2rem;
                 margin: 0.2rem 10px 0 0;
-
-            }
+                
+            }  
             
-            .heartFull {
+            .heartEmpty--full {
                 display: none;
             }
+            
         }
 
         p {
