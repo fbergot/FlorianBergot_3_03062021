@@ -28,7 +28,8 @@ html, body {
         color: #000;
         top: 50%;
         left: 25px;
-        transform: translateY(-30%);
+        padding: .5rem;
+        transform: translateY(-37%);
     }
 
     @include header;
@@ -68,12 +69,23 @@ html, body {
     i {
         font-size: 1.5rem;
         opacity: .65;
+
+        &:active {
+                color: rgb(219, 27, 27);
+                border-radius: 50%;
+            }
+
+        &:active::before {
+                content: "\f004";
+                font-weight: bold;
+                transition: color 1.2s ease-out;
+            }
     }
 }
 
 .entranceSection {
     background-color: $greyColor;
-    padding: 1rem;
+    padding: 1.2rem;
     margin-top: 30px;
 
     &__entrance {
@@ -132,7 +144,7 @@ html, body {
 
 .middleSection {
     background-color: $greyColor;
-    padding: 1rem;
+    padding: 1.2rem;
 
     &__middle {
         h2 {
@@ -157,7 +169,7 @@ html, body {
 
 .dessertSection {
     background-color: $greyColor;
-    padding: 1rem;
+    padding: 1.2rem;
 
     &__dessert {
         h2 {
@@ -185,20 +197,6 @@ html, body {
     justify-content: center;
     background-color: $greyColor;
 
+    // take 2 params (padd-l and padd-r)
     @include button(40px, 40px);
-    // button {
-    //     padding: .9em 1.2em .9em 1.2em;
-    //     border-radius: 2rem;
-    //     background: linear-gradient(170deg, $secondaryColorPink, $primaryColorPurple);
-    //     border: none;
-    //     color: #FFF;
-    //     font-weight: 400;
-    //     font-family: $fontRoboto;
-    //     font-size: 1rem;
-    //     margin-bottom: 40px;
-
-    //     //modificateur
-    //     padding-left: 40px;
-    //     padding-right: 40px;
-    //     }
 }

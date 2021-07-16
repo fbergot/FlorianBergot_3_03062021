@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap");
 html, body, div, span, applet, object, iframe,
@@ -53,7 +54,7 @@ table {
 .footer {
   background-color: #353535;
   color: #FFF;
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  padding: 1rem 1.2rem 1.5rem 1.2rem;
 }
 .footer h2 {
   font-size: 1.2rem;
@@ -100,7 +101,8 @@ html, body {
   color: #000;
   top: 50%;
   left: 25px;
-  transform: translateY(-30%);
+  padding: 0.5rem;
+  transform: translateY(-37%);
 }
 .header div {
   display: flex;
@@ -145,10 +147,19 @@ html, body {
   font-size: 1.5rem;
   opacity: 0.65;
 }
+.title i:active {
+  color: #db1b1b;
+  border-radius: 50%;
+}
+.title i:active::before {
+  content: "";
+  font-weight: bold;
+  transition: color 1.2s ease-out;
+}
 
 .entranceSection {
   background-color: #f6f6f6;
-  padding: 1rem;
+  padding: 1.2rem;
   margin-top: 30px;
 }
 .entranceSection__entrance h2 {
@@ -197,7 +208,7 @@ html, body {
 
 .middleSection {
   background-color: #f6f6f6;
-  padding: 1rem;
+  padding: 1.2rem;
 }
 .middleSection__middle h2 {
   opacity: 0.8;
@@ -217,7 +228,7 @@ html, body {
 
 .dessertSection {
   background-color: #f6f6f6;
-  padding: 1rem;
+  padding: 1.2rem;
 }
 .dessertSection__dessert h2 {
   opacity: 0.8;
@@ -247,14 +258,18 @@ html, body {
   border: none;
   color: #FFF;
   font-weight: 400;
+  box-shadow: 1px 3px 6px 1px #ccc6c6;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;
+  cursor: pointer;
+  transition: background, cursor 0.5s;
 }
 .containerButton button:hover {
-  cursor: pointer;
+  background: linear-gradient(170deg, #f181d2, #ac7de6);
+  box-shadow: 2px 3px 6px 1px #c2bebe;
 }
 
 /*# sourceMappingURL=menuStyle.css.map */

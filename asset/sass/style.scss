@@ -80,6 +80,7 @@ html, body {
             padding-bottom: 2rem;
         }
 
+        // take 2 params (padd-l and padd-r)
         @include button(.9em,.9em);
         
     }
@@ -89,7 +90,7 @@ html, body {
 
 .sectionOperation {
     // border: 1px solid black;
-    padding: 1.5rem;
+    padding: 1.2rem;
     margin-top: 20px;
 
     h1 {
@@ -106,7 +107,7 @@ html, body {
 
 .sectionOperation__bubble {
     position: relative;
-    padding: 1em 0;
+    padding: 1rem 0;
     border-radius: 19px;
     margin-top: 20px;
     background-color: #f6f6f6;
@@ -156,7 +157,7 @@ html, body {
 
 .sectionRestaurant {
     margin-top: 20px;
-    padding: 2rem 1.5rem 3.5rem 1.5rem;
+    padding: 2rem 1.2rem 3.5rem 1.2rem;
     background-color: #f6f6f6;
 
     h1 {
@@ -211,19 +212,25 @@ html, body {
             }
 
             i {
-                font-size: 1.2rem;
-                margin: 0.2rem 10px 0 0;
+                font-size: 1.25rem;
+                margin: 0.3rem .5rem 0 0;
                 
             }  
             
-            .heartEmpty--full {
-                display: none;
+            .heartEmpty:active {
+                color: $primaryColorPurple;
+                border-radius: 50%;
+
+                &::before {
+                    content: "\f004";
+                    font-weight: bold;
+                }
             }
-            
+
         }
 
         p {
-            padding: 0 0 0 .5rem;
+            padding: 0 0 .2rem .5rem;
             color: #000;
             font-weight: 100;
         }

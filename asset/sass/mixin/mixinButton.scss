@@ -7,15 +7,19 @@
         border: none;
         color: #FFF;
         font-weight: 400;
+        box-shadow: 1px 3px 6px 1px  rgb(204, 198, 198);
         font-family: $fontRoboto;
         font-size: 1rem;
         margin-bottom: 40px;
         padding-left: #{$paddingLeft};
         padding-right: #{$paddingRight};
+        cursor: pointer;
+        transition: background, cursor .5s;
         
         &:hover {
-            cursor: pointer;
+            background: linear-gradient(170deg, #f181d2, #ac7de6);
+            box-shadow: 2px 3px 6px 1px  rgb(194, 190, 190);
         }
-        }
+    }
 
 }
