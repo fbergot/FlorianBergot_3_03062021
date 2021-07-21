@@ -194,7 +194,7 @@ html, body {
 .card__anim {
   width: 0;
   display: flex;
-  transition: 1.5s;
+  transition: 0.8s;
   color: #FFF;
   justify-content: center;
   align-items: center;
@@ -203,18 +203,31 @@ html, body {
 }
 .card__anim i {
   font-size: 1.8rem;
-  transition: 1s;
+  transition: 0.5s;
 }
 .card:hover .card__anim {
   width: 25%;
+  margin-left: 10px;
 }
 .card:hover .card__anim i {
   transform: rotate(360deg);
+}
+.card:hover .card__container1 .card__p {
+  margin-right: -80px;
+  max-width: 85%;
+}
+.card:hover .card__container1 .card__cont p {
+  margin-right: -80px;
+  max-width: 78%;
 }
 .card__p {
   font-weight: bold;
   font-size: 1.1rem;
   padding: 0.65rem 0 0.2rem 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 1s;
 }
 .card__cont {
   display: flex;
@@ -229,11 +242,13 @@ html, body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  transition: 1s;
 }
 .card__cont span {
   padding-right: 1.1rem;
   font-weight: bold;
   opacity: 0.9;
+  margin-left: 10px;
 }
 
 .middleSection {
@@ -300,6 +315,50 @@ html, body {
 .containerButton button:hover {
   background: linear-gradient(170deg, #f181d2, #ac7de6);
   box-shadow: 2px 3px 6px 1px #c2bebe;
+}
+
+.entranceSection__containerCard .card:nth-child(1) {
+  animation: appearance 1.3s linear forwards 0.6s;
+}
+.entranceSection__containerCard .card:nth-child(2) {
+  animation: appearance 1.3s linear forwards 0.8s;
+}
+.entranceSection__containerCard .card:nth-child(3) {
+  animation: appearance 1.3s linear forwards 1s;
+}
+.entranceSection__containerCard .card:nth-child(4) {
+  animation: appearance 1.3s linear forwards 1.2s;
+}
+
+.middleSection__containerCard .card:nth-child(1) {
+  animation: appearance 1.3s linear forwards 0.6s;
+}
+.middleSection__containerCard .card:nth-child(2) {
+  animation: appearance 1.3s linear forwards 0.8s;
+}
+.middleSection__containerCard .card:nth-child(3) {
+  animation: appearance 1.3s linear forwards 1s;
+}
+
+.dessertSection__containerCard .card:nth-child(1) {
+  animation: appearance 1.3s linear forwards 0.6s;
+}
+.dessertSection__containerCard .card:nth-child(2) {
+  animation: appearance 1.3s linear forwards 0.8s;
+}
+.dessertSection__containerCard .card:nth-child(3) {
+  animation: appearance 1.3s linear forwards 1s;
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+    transform: translate(0, 30%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 /*# sourceMappingURL=menuStyle.css.map */
