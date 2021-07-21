@@ -179,10 +179,37 @@ html, body {
 }
 
 .card {
+  display: flex;
+  justify-content: space-around;
   background-color: #FFF;
+  cursor: pointer;
+  overflow: hidden;
   border-radius: 13px;
   margin-bottom: 15px;
   box-shadow: 3px 3px 6px #adabab;
+}
+.card__container1 {
+  width: 99%;
+}
+.card__anim {
+  width: 0;
+  display: flex;
+  transition: 1.5s;
+  color: #FFF;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #99E2D0;
+}
+.card__anim i {
+  font-size: 1.8rem;
+  transition: 1s;
+}
+.card:hover .card__anim {
+  width: 25%;
+}
+.card:hover .card__anim i {
+  transform: rotate(360deg);
 }
 .card__p {
   font-weight: bold;
@@ -199,6 +226,9 @@ html, body {
   margin-left: 0.5rem;
   font-size: 0.95rem;
   opacity: 0.8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .card__cont span {
   padding-right: 1.1rem;

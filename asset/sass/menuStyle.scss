@@ -111,12 +111,49 @@ html, body {
 
 .card {
     // border: 1px solid blue;
+    display: flex;
+    justify-content: space-around;
     background-color: #FFF;
+    cursor: pointer;
+    overflow: hidden;
     border-radius: 13px;
     margin-bottom: 15px;
     box-shadow: 3px 3px 6px rgb(173, 171, 171);
 
+    &__container1 {
+        width: 99%;
+    }
+
+    &__anim {
+
+        width: 0;
+        display: flex;
+        transition: 1.5s;
+        color: #FFF;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: $tertiaryColorBlue;
+
+        i {
+            font-size: 1.8rem;
+            transition: 1s;
+        }
+    }
+
+    &:hover .card__anim  {
+        width: 25%;
+        
+    }
+
+    &:hover .card__anim i {
+        transform: rotate(360deg);
+    }
+
+
+
     &__p {
+        // display: inline;
         font-weight: bold;
         font-size: 1.1rem;
         padding: .65rem 0 .2rem .5rem;
@@ -132,6 +169,9 @@ html, body {
             margin-left: .5rem;
             font-size: .95rem;
             opacity: .8;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         span {
@@ -139,6 +179,7 @@ html, body {
             font-weight: bold;
             opacity: .9;
         }
+       
     }
 }
 
