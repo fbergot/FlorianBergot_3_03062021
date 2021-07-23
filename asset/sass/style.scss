@@ -254,6 +254,7 @@ html, body {
     }   
 }
 
+// media query section-----------------------
 // 768px firstBreak
 @media screen and (min-width: $firstBreakpoint) {
     main {
@@ -311,7 +312,6 @@ html, body {
 // 992px secondBreak
 @media screen and (min-width: $secondBreakpoint) {
     .sectionRestaurant {
-
          &ContainerCard {
             flex-direction: row;
             flex-wrap: wrap;
@@ -325,6 +325,29 @@ html, body {
         }
     }
 }
+
+// 1024px thirdBreak
+@media screen and (min-width: $thirdBreakpoint){
+    .sectionRestaurant {
+        &__Card {
+            width: 49.17%;
+            min-width: 49.17%;
+        }
+    }
+       
+}
+
+// 1400px finalBreak
+@media screen and (min-width: $finalBreakpoint){
+    .sectionRestaurant {
+        &__Card {
+            width: 49.375%;
+            min-width: 49.375%;
+        }
+    }
+       
+}
+
 
 
 

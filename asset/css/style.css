@@ -367,5 +367,17 @@ html, body {
     min-width: 49.14%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .sectionRestaurant__Card {
+    width: 49.17%;
+    min-width: 49.17%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .sectionRestaurant__Card {
+    width: 49.375%;
+    min-width: 49.375%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

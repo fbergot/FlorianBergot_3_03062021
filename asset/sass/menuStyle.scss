@@ -319,3 +319,24 @@ html, body {
         transform: translate(0, 0);
     }
 }
+
+@media screen and (min-width: $thirdBreakpoint) {
+    .sectionGeneralContainer {
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-areas: "entrance middle dessert";
+    }
+
+    .entranceSection {
+        padding-right: .15rem;
+    }
+
+    .middleSection {
+        margin-top: 30px;
+        padding-right: .15rem;
+    }
+
+    .dessertSection {
+        margin-top: 30px;
+    }
+}
