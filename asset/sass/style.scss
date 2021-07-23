@@ -26,12 +26,9 @@ html, body {
 }
 
 // -------------------sectionReserve
-
-.sectionReserve {
-    // border: 1px solid red;
+.inputPosition {
     border-top: 3px solid #cfcfcf;
-    header {
-        display: flex;
+     display: flex;
         justify-content: center;
         background-color: #eaeaea;
         padding: 0.1rem;
@@ -53,8 +50,34 @@ html, body {
             font-family: $fontRoboto;
 
         }
+}
+.sectionReserve {
+    // border: 1px solid red;
+    // header {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: #eaeaea;
+    //     padding: 0.1rem;
 
-    }
+    //     .positionIcon {
+    //         font-size: .8rem;
+    //         padding: .6rem .4rem .6rem 0rem;
+    //         margin-left: 3.5rem;
+    //         margin-top: 2px;
+    //     }
+
+    //     input {
+    //         border: none;
+    //         padding: .6rem .4rem .6rem .3rem;
+    //         background-color: transparent;
+    //         font-size: 1rem;
+    //         color: #404040;
+    //         font-weight: 600;
+    //         font-family: $fontRoboto;
+
+    //     }
+
+    // }
 
     .sectionReserve__div {
         // border: 1px solid blue;
@@ -192,8 +215,6 @@ html, body {
             height: 70%;
             border-radius: 1rem 1rem 0 0;
             
-            
-
             img {
                 position: relative;
                 width: 100%;
@@ -219,7 +240,6 @@ html, body {
                     text-align: center;
                     color: #2c7c69;
                     font-weight: bold;
-
                 }
             }
         }
@@ -250,7 +270,6 @@ html, body {
                     font-weight: bold;
                 }
             }
-
         }
 
         p {
@@ -259,6 +278,66 @@ html, body {
             font-weight: 100;
         }
     }   
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "inputPosition inputPosition"
+                             "reserve operation"
+                             "restaurant restaurant";                            
+    }
+
+    .inputPosition {
+        grid-area: inputPosition;
+    }
+
+    .sectionReserve {
+        grid-area: reserve;
+
+        &__div {
+            height: 297px;
+        }
+    }
+
+    .sectionOperation {
+        grid-area: operation;
+        margin-top: 0;
+        padding-top: .7rem;
+        background-color: transparent;
+
+    }
+
+    .sectionRestaurant {
+        grid-area: restaurant;
+    }
+
+    .footer {
+        div {
+            flex-direction: row;
+            a:nth-child(2),a:nth-child(3), a:nth-child(4) {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sectionRestaurant {
+
+         &ContainerCard {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+            column-gap: 1rem;
+        }
+
+        &__Card {
+            width: 49.14%;
+            min-width: 49.14%;
+        }
+    }
 }
 
 

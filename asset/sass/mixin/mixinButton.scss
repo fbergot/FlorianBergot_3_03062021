@@ -1,3 +1,4 @@
+// take 2 params (padd-l and padd-r)
 @mixin button ($paddingLeft, $paddingRight) {
 
     button {
@@ -17,7 +18,7 @@
         transition: background, cursor .5s;
         
         &:hover {
-            background: linear-gradient(170deg, #f181d2, #ac7de6);
+            background: linear-gradient(170deg, lighten($secondaryColorPink,5%), lighten($primaryColorPurple,5%));
             box-shadow: 2px 3px 6px 1px  rgb(194, 190, 190);
         }
     }

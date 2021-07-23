@@ -315,7 +315,7 @@ html, body {
   transition: background, cursor 0.5s;
 }
 .containerButton button:hover {
-  background: linear-gradient(170deg, #f181d2, #ac7de6);
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
   box-shadow: 2px 3px 6px 1px #c2bebe;
 }
 
