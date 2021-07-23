@@ -153,11 +153,11 @@ html, body {
   opacity: 0.65;
   cursor: pointer;
 }
-.title i:active {
+.title i:active, .title i:hover {
   color: #f11818;
   border-radius: 50%;
 }
-.title i:active::before {
+.title i:active::before, .title i:hover::before {
   content: "";
   font-weight: bold;
   color: #eb2929;

@@ -1,4 +1,4 @@
-@import "./var_colors_and_fonts.scss";
+@import "./module/var_colors_and_fonts.scss";
 @import "./module/reset.scss";
 
 // HTML Elements
@@ -73,17 +73,18 @@ html, body {
         opacity: .65;
         cursor: pointer;
 
-        &:active {
-                color: rgb(241, 24, 24);
-                border-radius: 50%;
-            }
+        &:active, &:hover {
+            color: rgb(241, 24, 24);
+            border-radius: 50%;
 
-        &:active::before {
-                content: "\f004";
-                font-weight: bold;
-                color: rgb(235, 41, 41);
-                transition: color .8s ease-out;
-            }
+            &::before {
+                    content: "\f004";
+                    font-weight: bold;
+                    color: rgb(235, 41, 41);
+                    transition: color .8s ease-out;
+                }
+        }
+
     }
 }
 
