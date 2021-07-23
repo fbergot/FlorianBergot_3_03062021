@@ -255,6 +255,7 @@ html, body {
 }
 
 // media query section-----------------------
+
 // 768px firstBreak
 @media screen and (min-width: $firstBreakpoint) {
     main {
@@ -296,16 +297,6 @@ html, body {
 
     .sectionRestaurant {
         grid-area: restaurant;
-    }
-
-    .footer {
-        div {
-            flex-direction: row;
-
-            a:nth-child(2),a:nth-child(3), a:nth-child(4) {
-                margin-left: 1rem;
-            }
-        }
     }
 }
 

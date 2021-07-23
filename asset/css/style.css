@@ -151,7 +151,7 @@ html, body {
   padding-bottom: 2rem;
 }
 .sectionReserve__div button {
-  padding: 0.9em 1.2em 0.9em 1.2em;
+  padding: 0.9em 0;
   border-radius: 2rem;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   border: none;
@@ -346,13 +346,6 @@ html, body {
 
   .sectionRestaurant {
     grid-area: restaurant;
-  }
-
-  .footer div {
-    flex-direction: row;
-  }
-  .footer div a:nth-child(2), .footer div a:nth-child(3), .footer div a:nth-child(4) {
-    margin-left: 1rem;
   }
 }
 @media screen and (min-width: 992px) {

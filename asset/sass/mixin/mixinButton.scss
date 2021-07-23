@@ -2,7 +2,7 @@
 @mixin button ($paddingLeft, $paddingRight) {
 
     button {
-        padding: .9em 1.2em .9em 1.2em;
+        padding: .9em 0;
         border-radius: 2rem;
         background: linear-gradient(170deg, $secondaryColorPink, $primaryColorPurple);
         border: none;
