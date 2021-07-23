@@ -18,6 +18,10 @@
             padding: .2rem;
             text-decoration: none;
 
+            &:hover {
+                text-decoration: underline;
+            }
+
             span {
                 padding-right: 0.5rem;
             }
@@ -35,4 +39,6 @@
             font-size: 0.75rem;
         }
     }
+
+    
 }

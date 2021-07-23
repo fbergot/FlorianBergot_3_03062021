@@ -52,32 +52,6 @@ html, body {
         }
 }
 .sectionReserve {
-    // border: 1px solid red;
-    // header {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: #eaeaea;
-    //     padding: 0.1rem;
-
-    //     .positionIcon {
-    //         font-size: .8rem;
-    //         padding: .6rem .4rem .6rem 0rem;
-    //         margin-left: 3.5rem;
-    //         margin-top: 2px;
-    //     }
-
-    //     input {
-    //         border: none;
-    //         padding: .6rem .4rem .6rem .3rem;
-    //         background-color: transparent;
-    //         font-size: 1rem;
-    //         color: #404040;
-    //         font-weight: 600;
-    //         font-family: $fontRoboto;
-
-    //     }
-
-    // }
 
     .sectionReserve__div {
         // border: 1px solid blue;
@@ -157,8 +131,8 @@ html, body {
             padding: 0.5rem;
             font-size: 1.2rem;
             color: rgba(126,126,126,1);
-            margin-right: 20px;
-            margin-left: 20px;
+            margin-right: 18px;
+            margin-left: 25px;
 
             &--purple {
                 color: $primaryColorPurple;
@@ -259,13 +233,16 @@ html, body {
                 font-size: 1.25rem;
                 margin: 0.3rem .5rem 0 0;
                 cursor: pointer;
+                opacity: 0.8;
+                transition: 0.2s linear;
             }  
             
-            .heartEmpty:active {
+            .heartEmpty:active, .heartEmpty:hover {
                 color: $primaryColorPurple;
                 border-radius: 50%;
 
                 &::before {
+                    color: $primaryColorPurple;
                     content: "\f004";
                     font-weight: bold;
                 }
@@ -336,6 +313,19 @@ html, body {
         &__Card {
             width: 49.14%;
             min-width: 49.14%;
+
+            // .containerTextCard {
+
+            //     .heartEmpty:hover {
+            //         color: $primaryColorPurple;
+            //         border-radius: 50%;
+    
+            //         &::before {
+            //             content: "\f004";
+            //             font-weight: bold;
+            //         }
+            //     }
+            // }
         }
     }
 }

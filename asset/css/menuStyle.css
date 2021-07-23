@@ -70,6 +70,9 @@ table {
   padding: 0.2rem;
   text-decoration: none;
 }
+.footer div a:hover {
+  text-decoration: underline;
+}
 .footer div a span {
   padding-right: 0.5rem;
 }
@@ -130,7 +133,7 @@ html, body {
 
 .title {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 230px;
@@ -141,10 +144,12 @@ html, body {
 }
 .title h1 {
   font-size: 1.6rem;
+  padding-left: 1.2rem;
   font-family: "Shrikhand", cursive;
 }
 .title i {
   font-size: 1.5rem;
+  margin-right: 2.8rem;
   opacity: 0.65;
   cursor: pointer;
 }
@@ -155,7 +160,8 @@ html, body {
 .title i:active::before {
   content: "";
   font-weight: bold;
-  transition: color 1s ease-out;
+  color: #eb2929;
+  transition: color 0.8s ease-out;
 }
 
 .entranceSection {
@@ -208,7 +214,7 @@ html, body {
   transition: 0.5s;
 }
 .card:hover .card__anim {
-  width: 25%;
+  width: 5.5em;
   margin-left: 10px;
 }
 .card:hover .card__anim i {
@@ -355,7 +361,7 @@ html, body {
 @keyframes appearance {
   from {
     opacity: 0;
-    transform: translate(0, 30%);
+    transform: translate(0, 33%);
   }
   to {
     opacity: 1;
