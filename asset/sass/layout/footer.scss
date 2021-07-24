@@ -1,0 +1,47 @@
+@mixin footer {
+
+    & {
+        background-color: #353535;
+        color: #FFF;
+        padding: 1rem 1.2rem 1.5rem 1.2rem;
+    
+        h2 {
+            font-size: 1.2rem;
+            font-family: $fontShrikhand;
+            padding: .5rem 0 1rem 0;
+        }
+    
+        div {
+            display: flex;
+            flex-direction: column;
+            
+            a {
+                color: #FFF;
+                padding: .2rem;
+                text-decoration: none;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+    
+                span {
+                    padding-right: 0.5rem;
+                }
+                
+                .footer__span2 {
+                    padding-right: 3px;
+                }
+            }
+    
+            i {
+                font-size: .8rem;
+            }
+    
+            .handsIcon {
+                font-size: 0.75rem;
+            }
+        }
+    
+        
+    }
+}

@@ -1,0 +1,31 @@
+ @mixin header($param:0) {
+     
+     div {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0 10px 0;
+    
+            img {
+                width: 160px;
+                height: auto;
+            }
+        }
+
+    @if $param == 1 {
+            position: relative;
+
+        a {
+            position: absolute;
+            color: #000;
+            top: 50%;
+            left: 25px;
+            padding: .5rem;
+            transform: translateY(-50%);
+        }
+
+        a:hover, a:active {
+            background-color: $greyColor;
+        }
+    }
+ }
+ 

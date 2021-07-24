@@ -1,12 +1,12 @@
-@import "./module/var_colors_and_fonts.scss";
-@import "./module/reset.scss";
+@import "./utils/variable/variables";
+@import "./module/reset";
 
-// HTML Elements
-@import "./HTML_elements/footer.scss";
+// layouts
+@import "./layout/footer";
+@import "./layout/header";
 
 // mixin
-@import "./HTML_elements/mixin/header.scss";
-@import "./mixin/mixinButton.scss";
+@import "./utils/mixin/mixinButton";
 
 /*Fin reset et html elements*/
 
@@ -65,7 +65,6 @@ main {
         border-bottom-color: $secondaryColorPink;
         border-left-color: $tertiaryColorBlue;
         animation: spinner1 2 2s;
-        border-image-width: 30px;
 
         p {
             font-family: $fontShrikhand;
@@ -82,7 +81,7 @@ main {
         border-radius: 50%;
         border-top-color: rgb(117, 114, 114);
         border-bottom-color: rgb(117, 114, 114);
-        animation: spinner2 infinite 2s;
+        animation: spinner2 2 2s;
     }
 }
 
@@ -365,6 +364,10 @@ main {
     }   
 }
 
+
+.footer {
+    @include footer;
+}
 // media query section-----------------------
 
 // 768px firstBreak

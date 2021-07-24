@@ -51,41 +51,6 @@ table {
   border-spacing: 0;
 }
 
-.footer {
-  background-color: #353535;
-  color: #FFF;
-  padding: 1rem 1.2rem 1.5rem 1.2rem;
-}
-.footer h2 {
-  font-size: 1.2rem;
-  font-family: "Shrikhand", cursive;
-  padding: 0.5rem 0 1rem 0;
-}
-.footer div {
-  display: flex;
-  flex-direction: column;
-}
-.footer div a {
-  color: #FFF;
-  padding: 0.2rem;
-  text-decoration: none;
-}
-.footer div a:hover {
-  text-decoration: underline;
-}
-.footer div a span {
-  padding-right: 0.5rem;
-}
-.footer div a .footer__span2 {
-  padding-right: 3px;
-}
-.footer div i {
-  font-size: 0.8rem;
-}
-.footer div .handsIcon {
-  font-size: 0.75rem;
-}
-
 /*Fin reset et html elements*/
 * {
   box-sizing: border-box;
@@ -99,14 +64,6 @@ html, body {
 .header {
   position: relative;
 }
-.header a {
-  position: absolute;
-  color: #000;
-  top: 50%;
-  left: 25px;
-  padding: 0.5rem;
-  transform: translateY(-50%);
-}
 .header div {
   display: flex;
   justify-content: center;
@@ -115,6 +72,17 @@ html, body {
 .header div img {
   width: 160px;
   height: auto;
+}
+.header a {
+  position: absolute;
+  color: #000;
+  top: 50%;
+  left: 25px;
+  padding: 0.5rem;
+  transform: translateY(-50%);
+}
+.header a:hover, .header a:active {
+  background-color: #f6f6f6;
 }
 
 .imageSection {
@@ -323,6 +291,41 @@ html, body {
 .containerButton button:hover {
   background: linear-gradient(170deg, #ff93e1, #a16be0);
   box-shadow: 2px 3px 6px 1px #c2bebe;
+}
+
+.footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 1rem 1.2rem 1.5rem 1.2rem;
+}
+.footer h2 {
+  font-size: 1.2rem;
+  font-family: "Shrikhand", cursive;
+  padding: 0.5rem 0 1rem 0;
+}
+.footer div {
+  display: flex;
+  flex-direction: column;
+}
+.footer div a {
+  color: #FFF;
+  padding: 0.2rem;
+  text-decoration: none;
+}
+.footer div a:hover {
+  text-decoration: underline;
+}
+.footer div a span {
+  padding-right: 0.5rem;
+}
+.footer div a .footer__span2 {
+  padding-right: 3px;
+}
+.footer div i {
+  font-size: 0.8rem;
+}
+.footer div .handsIcon {
+  font-size: 0.75rem;
 }
 
 .entranceSection__containerCard .card:nth-child(1) {

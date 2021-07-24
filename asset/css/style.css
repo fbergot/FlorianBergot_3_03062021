@@ -51,41 +51,6 @@ table {
   border-spacing: 0;
 }
 
-.footer {
-  background-color: #353535;
-  color: #FFF;
-  padding: 1rem 1.2rem 1.5rem 1.2rem;
-}
-.footer h2 {
-  font-size: 1.2rem;
-  font-family: "Shrikhand", cursive;
-  padding: 0.5rem 0 1rem 0;
-}
-.footer div {
-  display: flex;
-  flex-direction: column;
-}
-.footer div a {
-  color: #FFF;
-  padding: 0.2rem;
-  text-decoration: none;
-}
-.footer div a:hover {
-  text-decoration: underline;
-}
-.footer div a span {
-  padding-right: 0.5rem;
-}
-.footer div a .footer__span2 {
-  padding-right: 3px;
-}
-.footer div i {
-  font-size: 0.8rem;
-}
-.footer div .handsIcon {
-  font-size: 0.75rem;
-}
-
 /*Fin reset et html elements*/
 * {
   box-sizing: border-box;
@@ -139,7 +104,6 @@ main {
   border-bottom-color: #FF79DA;
   border-left-color: #99E2D0;
   animation: spinner1 2 2s;
-  border-image-width: 30px;
 }
 .spinnerContainer div:nth-child(1) p {
   font-family: "Shrikhand", cursive;
@@ -154,7 +118,7 @@ main {
   border-radius: 50%;
   border-top-color: #757272;
   border-bottom-color: #757272;
-  animation: spinner2 infinite 2s;
+  animation: spinner2 2 2s;
 }
 
 @keyframes spinner1 {
@@ -408,6 +372,41 @@ main {
   color: #000;
   font-weight: 100;
   font-size: 0.95rem;
+}
+
+.footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 1rem 1.2rem 1.5rem 1.2rem;
+}
+.footer h2 {
+  font-size: 1.2rem;
+  font-family: "Shrikhand", cursive;
+  padding: 0.5rem 0 1rem 0;
+}
+.footer div {
+  display: flex;
+  flex-direction: column;
+}
+.footer div a {
+  color: #FFF;
+  padding: 0.2rem;
+  text-decoration: none;
+}
+.footer div a:hover {
+  text-decoration: underline;
+}
+.footer div a span {
+  padding-right: 0.5rem;
+}
+.footer div a .footer__span2 {
+  padding-right: 3px;
+}
+.footer div i {
+  font-size: 0.8rem;
+}
+.footer div .handsIcon {
+  font-size: 0.75rem;
 }
 
 @media screen and (min-width: 768px) {

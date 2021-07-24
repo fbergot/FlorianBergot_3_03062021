@@ -1,15 +1,14 @@
-@import "./module/var_colors_and_fonts.scss";
-@import "./module/reset.scss";
+@import "./utils/variable/variables";
+@import "./module/reset";
 
-// HTML Elements
-@import "./HTML_elements/footer.scss";
+//  Elements
+@import "./layout/footer";
+@import "./layout/header";
 
 // mixin
-@import "./HTML_elements/mixin/header.scss";
-@import "../sass/mixin/mixinButton.scss";
+@import "./utils/mixin/mixinButton";
 
 /*Fin reset et html elements*/
-
 * {
     box-sizing: border-box;
 }
@@ -20,19 +19,8 @@ html, body {
 
 }
 
-.header {
-    position: relative;
-
-    a {
-        position: absolute;
-        color: #000;
-        top: 50%;
-        left: 25px;
-        padding: .5rem;
-        transform: translateY(-50%);
-    }
-
-    @include header;
+.header {   
+    @include header(1);
 }
 
 .imageSection {
@@ -266,6 +254,10 @@ html, body {
     @include button(40px, 40px);
 }
 
+
+.footer {
+    @include footer;
+}
 // animation on appearance
 
 .entranceSection__containerCard {
