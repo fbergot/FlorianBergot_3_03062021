@@ -328,15 +328,18 @@ html, body {
     }
 
     .entranceSection {
+        grid-area: entrance;
         padding-right: .15rem;
     }
 
     .middleSection {
+        grid-area: middle;
         margin-top: 30px;
         padding-right: .15rem;
     }
 
     .dessertSection {
+        grid-area: dessert;
         margin-top: 30px;
     }
 }
