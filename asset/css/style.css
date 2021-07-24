@@ -135,7 +135,7 @@ main {
   border: 20px solid transparent;
   border-radius: 50%;
   border-top-color: #9356DC;
-  border-right-color: #ca73b7;
+  border-right-color: #99E2D0;
   border-bottom-color: #FF79DA;
   border-left-color: #99E2D0;
   animation: spinner1 2 2s;
@@ -173,7 +173,7 @@ main {
 @keyframes spinner2 {
   0% {
     transform: rotate(0);
-    border-width: 4px;
+    border-width: 3px;
   }
   50% {
     transform: rotate(360deg);
@@ -181,7 +181,7 @@ main {
   }
   100% {
     transform: rotate(360deg);
-    border-width: 4px;
+    border-width: 3px;
   }
 }
 @keyframes displayNone {
