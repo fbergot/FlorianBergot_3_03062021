@@ -223,7 +223,7 @@ main {
   padding-left: 0.9em;
   padding-right: 0.9em;
   cursor: pointer;
-  transition: background, cursor 0.5s;
+  transition: background 0.3s, cursor 0.5s;
 }
 .sectionReserve__div button:hover {
   background: linear-gradient(170deg, #ff93e1, #a16be0);

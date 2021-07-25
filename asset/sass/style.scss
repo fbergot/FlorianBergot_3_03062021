@@ -1,4 +1,9 @@
-@import "./utils/variable/variables";
+// variables
+@import "./utils/variable//fonts";
+@import "./utils/variable/colors";
+@import "./utils/variable/breakpoints";
+
+// module reset
 @import "./module/reset";
 
 // layouts

@@ -129,7 +129,7 @@ html, body {
   content: "";
   font-weight: bold;
   color: #eb2929;
-  transition: color 0.8s ease-out;
+  transition: color 0.7s linear;
 }
 
 .entranceSection {
@@ -286,7 +286,7 @@ html, body {
   padding-left: 40px;
   padding-right: 40px;
   cursor: pointer;
-  transition: background, cursor 0.5s;
+  transition: background 0.3s, cursor 0.5s;
 }
 .containerButton button:hover {
   background: linear-gradient(170deg, #ff93e1, #a16be0);

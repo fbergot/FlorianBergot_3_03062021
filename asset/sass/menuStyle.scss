@@ -1,4 +1,6 @@
-@import "./utils/variable/variables";
+@import "./utils/variable//fonts";
+@import "./utils/variable/colors";
+@import "./utils/variable/breakpoints";
 @import "./module/reset";
 
 //  Elements
@@ -9,6 +11,7 @@
 @import "./utils/mixin/mixinButton";
 
 /*Fin reset et html elements*/
+
 * {
     box-sizing: border-box;
 }
@@ -69,7 +72,7 @@ html, body {
                     content: "\f004";
                     font-weight: bold;
                     color: rgb(235, 41, 41);
-                    transition: color .8s ease-out;
+                    transition: color .7s linear;
                 }
         }
 

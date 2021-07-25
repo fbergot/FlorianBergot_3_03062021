@@ -15,7 +15,7 @@
         padding-left: #{$paddingLeft};
         padding-right: #{$paddingRight};
         cursor: pointer;
-        transition: background, cursor .5s;
+        transition: background .3s, cursor .5s;
         
         &:hover {
             background: linear-gradient(170deg, lighten($secondaryColorPink,5%), lighten($primaryColorPurple,5%));
