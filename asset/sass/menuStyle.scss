@@ -1,6 +1,9 @@
+// variables
 @import "./utils/variable//fonts";
 @import "./utils/variable/colors";
 @import "./utils/variable/breakpoints";
+
+// module reset
 @import "./module/reset";
 
 //  Elements
@@ -10,7 +13,7 @@
 // mixin
 @import "./utils/mixin/mixinButton";
 
-/*Fin reset et html elements*/
+/*Fin reset et import*/
 
 * {
     box-sizing: border-box;
@@ -59,7 +62,7 @@ html, body {
     }
 
     i {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         margin-right: 2.8rem;
         opacity: .65;
         cursor: pointer;
@@ -172,7 +175,6 @@ html, body {
 
     &__cont {
         display: flex;
-        // justify-content: center;
         padding-bottom: .65rem;
         padding-top: .2rem;
         justify-content: space-between;

@@ -37,10 +37,10 @@ main {
 
 @keyframes visibilityOk {
     0% {
-            opacity: 0;
+        opacity: 0;
     }
     50% {
-            opacity: 0;
+        opacity: 0;
     }
     100%{
         opacity: 1;
@@ -84,8 +84,8 @@ main {
         height: 240px;
         border: 5px solid transparent;
         border-radius: 50%;
-        border-top-color: rgb(117, 114, 114);
-        border-bottom-color: rgb(117, 114, 114);
+        border-top-color: darken($greyColor,20);
+        border-bottom-color: darken($greyColor,20);
         animation: spinner2 2 2s;
     }
 }
@@ -330,6 +330,7 @@ main {
         }
         
         .containerTextCard {
+            position: relative;
             display: flex;
             justify-content: space-between;
             padding: .7rem .5rem 0 .5rem;
@@ -348,21 +349,10 @@ main {
                 opacity: 0.8;
                 transition: 0.2s linear;
             }  
-            
-            .heartEmpty:active, .heartEmpty:hover {
-                color: $primaryColorPurple;
-                border-radius: 50%;
-
-                &::before {
-                    color: $primaryColorPurple;
-                    content: "\f004";
-                    font-weight: bold;
-                }
-            }
         }
 
         p {
-            padding: 0 0 .2rem .5rem;
+            padding: 0.4rem 0 .2rem .5rem;
             color: #000;
             font-weight: 100;
             font-size: 0.95rem;
@@ -370,6 +360,37 @@ main {
     }   
 }
 
+.svgContainer {
+    width: 25px;
+    height: 25px;
+    background: url("../img_and_logo/svg/heart.svg");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 25px 0px;
+    transition: 0.6s;
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    right: 1rem;
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        margin-right: 10px;
+        height: auto;
+        transition: 0.9s;
+        fill: black;
+        overflow: hidden;
+        &:hover {
+            opacity: 0;
+        }
+    }
+    &:hover {
+        background-position: 0px;
+        background-size: 25px 25px;
+    }
+}
 
 .footer {
     @include footer;

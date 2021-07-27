@@ -51,7 +51,7 @@ table {
   border-spacing: 0;
 }
 
-/*Fin reset et html elements*/
+/*Fin reset et import*/
 * {
   box-sizing: border-box;
 }
@@ -116,7 +116,7 @@ html, body {
   font-family: "Shrikhand", cursive;
 }
 .title i {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-right: 2.8rem;
   opacity: 0.65;
   cursor: pointer;
