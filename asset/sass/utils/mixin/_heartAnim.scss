@@ -1,0 +1,42 @@
+@mixin heartAnim($on_off : 0) {
+    // base for style.scss
+    width: 25px;
+    height: 25px;
+    background: url("../img_and_logo/svg/heart.svg");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 25px 0px;
+    transition: 0.6s;
+    cursor: pointer;
+    position: absolute;
+
+    @if $on_off == 0 {
+        top: 60%;
+        right: 1rem;
+               
+    } @else {
+        top: 1.4rem;
+        right: 1.2rem;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        margin-right: 10px;
+        height: auto;
+        transition: 0.6s;
+        fill: black;
+        overflow: hidden;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        background-position: 0px;
+        background-size: 25px 25px;
+    }
+}

@@ -1,0 +1,12 @@
+@mixin appearanceCardKeyframes($opacityFrom, $opacityTo, $percentTranslate ) {
+    @keyframes appearance {
+        from {
+            opacity: $opacityFrom;
+            transform: translate(0, $percentTranslate);
+        }
+        to {
+            opacity: $opacityTo;
+            transform: translate(0, 0);
+        }
+    }
+}

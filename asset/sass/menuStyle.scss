@@ -2,16 +2,19 @@
 @import "./utils/variable//fonts";
 @import "./utils/variable/colors";
 @import "./utils/variable/breakpoints";
-
+@import "./utils/variable/timeAnimationCard";
+@import "./utils/variable/paddingGeneralMenu";
 // module reset
 @import "./module/reset";
-
-//  Elements
+//  Elements-layout
 @import "./layout/footer";
 @import "./layout/header";
-
 // mixin
 @import "./utils/mixin/mixinButton";
+@import "./utils/mixin/heartAnim";
+@import "./utils/mixin/menuStyleSection";
+@import "./utils/mixin/cardAnimation";
+@import "./utils/mixin/imgGeneral";
 
 /*Fin reset et import*/
 
@@ -21,8 +24,7 @@
 
 html, body {
     font-size: 16px;
-    font-family: $fontRoboto
-
+    font-family: $fontRoboto;
 }
 
 .header {   
@@ -37,9 +39,7 @@ html, body {
         height: 200px;
 
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @include imgGeneral;
         }
     }
 }
@@ -62,66 +62,10 @@ html, body {
     }
 
     .svgContainer {
-        width: 25px;
-        height: 25px;
-        background: url("../img_and_logo/svg/heart.svg");
-        background-repeat: no-repeat;
-        background-position: 0px;
-        background-size: 25px 0px;
-        transition: 0.6s;
-        cursor: pointer;
-        position: absolute;        
-        top: 1.4rem;
-        right: 1.2rem;
-
-        svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 25px;
-            margin-right: 10px;
-            height: auto;
-            transition: 0.6s;
-            fill: black;
-            overflow: hidden;
-
-            &:hover {
-                opacity: 0;
-            }
-        }
-
-        &:hover {
-            background-position: 0px;
-            background-size: 25px 25px;
-        }
+        @include heartAnim(1);  
     }
 }
 
-.entranceSection {
-    background-color: $greyColor;
-    padding: 1.2rem;
-    margin-top: 30px;
-
-    &__entrance {
-        h2 {
-            opacity: .8;
-            padding: .2rem 0 .3rem .2rem;
-        }
-
-        .line {
-            margin-left: .2rem;
-            width: 40px;
-            height: 3px;
-            background-color: $tertiaryColorBlue;
-        }
-    }
-
-    &__containerCard {
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;       
-    }
-}
 
 .card {
     display: flex;
@@ -160,24 +104,24 @@ html, body {
         margin-left: 10px;
         
     }
-
+    
     &:hover .card__anim i {
         transform: rotate(360deg);
     }
-
+    
     &:hover .card__container1 .card__p{
         margin-right: -80px;
         max-width: 85%;
-
+        
     }
 
-     &:hover .card__container1 .card__cont p {
+    &:hover .card__container1 .card__cont p {
         margin-right: -80px;
         max-width: 78%;
-     }
-
-
-
+    }
+    
+    
+    
     &__p {
         font-weight: bold;
         font-size: 1.1rem;
@@ -203,7 +147,7 @@ html, body {
             overflow: hidden;
             transition: 1s;
         }
-
+        
         span {
             padding-right: 1.1rem;
             font-weight: bold;
@@ -215,54 +159,16 @@ html, body {
     }
 }
 
+.entranceSection {
+    @include menuStyleSection($margin_on: true, $padding: 1.2rem, $element: entrance);
+}
+
 .middleSection {
-    background-color: $greyColor;
-    padding: 1.2rem;
-
-    &__middle {
-        h2 {
-            opacity: .8;
-            padding: .2rem 0 .3rem .2rem;
-        }
-
-        .line {
-            margin-left: .2rem;
-            width: 40px;
-            height: 3px;
-            background-color: $tertiaryColorBlue;
-        }
-    }
-
-    &__containerCard {
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;       
-    }
+    @include menuStyleSection($margin_on: false, $padding: 1.2rem, $element: middle);
 }
 
 .dessertSection {
-    background-color: $greyColor;
-    padding: 1.2rem;
-
-    &__dessert {
-        h2 {
-            opacity: .8;
-            padding: .2rem 0 .3rem .2rem;
-        }
-
-        .line {
-            margin-left: .2rem;
-            width: 40px;
-            height: 3px;
-            background-color: $tertiaryColorBlue;
-        }
-    }
-
-    &__containerCard {
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;
-    }
+    @include menuStyleSection($margin_on: false, $padding: 1.2rem, $element: dessert);
 }
 
 .containerButton {
@@ -278,80 +184,50 @@ html, body {
 .footer {
     @include footer;
 }
-// animation on appearance
 
+
+// animation on appearance
 .entranceSection__containerCard {
-    .card:nth-child(1) {
-        animation: appearance 1.3s linear forwards .6s;
-    }
-    .card:nth-child(2) {
-        animation: appearance 1.3s linear forwards .8s;
-    }
-    .card:nth-child(3) {
-        animation: appearance 1.3s linear forwards 1s;
-    }
-    .card:nth-child(4) {
-        animation: appearance 1.3s linear forwards 1.2s;
-    }
+    @include cardAnimation(5, entrance);
 }
 
 .middleSection__containerCard {
-    .card:nth-child(1) {
-        animation: appearance 1.3s linear forwards 1.4s;
-    }
-    .card:nth-child(2) {
-        animation: appearance 1.3s linear forwards 1.6s;
-    }
-    .card:nth-child(3) {
-        animation: appearance 1.3s linear forwards 1.8s;
-    }
+    @include cardAnimation(4, middle);
 }
 
 .dessertSection__containerCard {
-    .card:nth-child(1) {
-        animation: appearance 1.3s linear forwards 2s;
-    }
-    .card:nth-child(2) {
-        animation: appearance 1.3s linear forwards 2.2s;
-    }
-    .card:nth-child(3) {
-        animation: appearance 1.3s linear forwards 2.4s;
-    }
+    @include cardAnimation(4, dessert);
 }
 
-@keyframes appearance {
 
-    from {
-        opacity: 0;
-        transform: translate(0, 33%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-}
 
 @media screen and (min-width: $thirdBreakpoint) {
+
+    $nameSection: entrance middle dessert;
+    $value : (
+        padding-right: .15rem,
+        margin-top: 30px       
+    );
+
     .sectionGeneralContainer {
         display: grid;
         grid-template-columns: 33.33% 33.33% 33.33%;
-        grid-template-areas: "entrance middle dessert";
+        grid-template-areas: "#{nth($nameSection, 1)} #{nth($nameSection, 2)} #{nth($nameSection, 3)}";
     }
 
-    .entranceSection {
-        grid-area: entrance;
-        padding-right: .15rem;
+    .#{nth($nameSection, 1)}Section {
+        grid-area: #{nth($nameSection, 1)};
+        padding-right: map-get($value , padding-right);
     }
 
-    .middleSection {
-        grid-area: middle;
-        margin-top: 30px;
-        padding-right: .15rem;
+    .#{nth($nameSection, 2)}Section {
+        grid-area: #{nth($nameSection, 2)};
+        margin-top: map-get($value ,margin-top);
+        padding-right: map-get($value , padding-right);
     }
 
-    .dessertSection {
-        grid-area: dessert;
-        margin-top: 30px;
+    .#{nth($nameSection, 3)}Section {
+        grid-area: #{nth($nameSection, 3)};
+        margin-top: map-get($value ,margin-top);
     }
 }

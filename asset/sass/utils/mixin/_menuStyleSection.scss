@@ -1,0 +1,34 @@
+@import "./componentMenuStyleSection";
+
+@mixin menuStyleSection($margin_on, $padding, $element) {
+    background-color: $greyColor;
+    padding: $padding;
+
+    @if $margin_on == true {
+        margin-top: 30px;
+    }
+
+    @if $element == entrance {
+        &__entrance {
+            @include componentMenuStyleSection;
+        }       
+    }
+
+    @if $element == middle {
+        &__middle {
+            @include componentMenuStyleSection;
+        }        
+    }
+
+    @if $element == dessert {
+        &__dessert {
+            @include componentMenuStyleSection;
+        }       
+    }
+
+    &__containerCard {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+}

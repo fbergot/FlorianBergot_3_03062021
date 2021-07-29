@@ -1,0 +1,18 @@
+$opacityList: 0 1;
+
+@mixin mainVisibilityKeyframes {
+    opacity: nth($opacityList, 1);
+    animation: visibilityOk 7.5s 1 forwards;
+
+    @keyframes visibilityOk {
+    0% {
+        opacity: nth($opacityList, 1);
+    }
+    50% {
+        opacity: nth($opacityList, 1);
+    }
+    100%{
+        opacity: nth($opacityList, 2);
+    }
+}
+}

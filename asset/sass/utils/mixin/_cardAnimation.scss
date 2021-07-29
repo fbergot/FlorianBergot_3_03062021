@@ -1,0 +1,12 @@
+@import "../mixin/keyframes/appearanceCardKeyframes";
+
+@mixin cardAnimation($numberLoop, $key) {
+    
+        @include appearanceCardKeyframes($opacityFrom: 0, $opacityTo: 1, $percentTranslate: 33%);
+    
+        @for $var from 1 to $numberLoop {
+            .card:nth-child(#{$var}) {
+                animation: appearance 1.3s linear forwards nth(map-get($timeAnimationCard , $key),$var);
+            }
+        }      
+}
