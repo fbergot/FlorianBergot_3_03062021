@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap");
 html, body, div, span, applet, object, iframe,
@@ -115,21 +114,36 @@ html, body {
   padding-left: 1.2rem;
   font-family: "Shrikhand", cursive;
 }
-.title i {
-  font-size: 1.7rem;
-  margin-right: 2.8rem;
-  opacity: 0.65;
+.title .svgContainer {
+  width: 25px;
+  height: 25px;
+  background: url("../img_and_logo/svg/heart.svg");
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-size: 25px 0px;
+  transition: 0.6s;
   cursor: pointer;
+  position: absolute;
+  top: 1.4rem;
+  right: 1.2rem;
 }
-.title i:active, .title i:hover {
-  color: #f11818;
-  border-radius: 50%;
+.title .svgContainer svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  margin-right: 10px;
+  height: auto;
+  transition: 0.6s;
+  fill: black;
+  overflow: hidden;
 }
-.title i:active::before, .title i:hover::before {
-  content: "";
-  font-weight: bold;
-  color: #eb2929;
-  transition: color 0.7s linear;
+.title .svgContainer svg:hover {
+  opacity: 0;
+}
+.title .svgContainer:hover {
+  background-position: 0px;
+  background-size: 25px 25px;
 }
 
 .entranceSection {

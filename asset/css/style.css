@@ -385,7 +385,7 @@ main {
   width: 25px;
   margin-right: 10px;
   height: auto;
-  transition: 0.9s;
+  transition: 0.6s;
   fill: black;
   overflow: hidden;
 }
