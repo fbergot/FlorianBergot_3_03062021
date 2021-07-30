@@ -1,0 +1,21 @@
+@mixin spinner2 {
+    @keyframes spinner2 {
+        0% {
+            transform: rotate(0);
+            border-width: 5px;
+        }
+
+        50% {
+            transform: rotate(360deg);
+            border-width: 2px;
+            top: -30px;
+            height: 260px;
+
+        }
+
+        100% {
+            transform: rotate(360deg);
+            border-width: 5px;
+        }
+    }
+}

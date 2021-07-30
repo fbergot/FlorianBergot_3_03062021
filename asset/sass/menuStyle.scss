@@ -15,6 +15,7 @@
 @import "./utils/mixin/menuStyleSection";
 @import "./utils/mixin/cardAnimation";
 @import "./utils/mixin/imgGeneral";
+@import "./utils/mixin/hoverCardAnim";
 
 /*Fin reset et import*/
 
@@ -99,29 +100,8 @@ html, body {
         }
     }
 
-    &:hover .card__anim  {
-        width: 5.5em;
-        margin-left: 10px;
-        
-    }
-    
-    &:hover .card__anim i {
-        transform: rotate(360deg);
-    }
-    
-    &:hover .card__container1 .card__p{
-        margin-right: -80px;
-        max-width: 85%;
-        
-    }
-
-    &:hover .card__container1 .card__cont p {
-        margin-right: -80px;
-        max-width: 78%;
-    }
-    
-    
-    
+    @include hoverCardAnim;
+           
     &__p {
         font-weight: bold;
         font-size: 1.1rem;
@@ -160,15 +140,15 @@ html, body {
 }
 
 .entranceSection {
-    @include menuStyleSection($margin_on: true, $padding: 1.2rem, $element: entrance);
+    @include menuStyleSection($margin_on: true, $padding: nth($paddBlocMenu, 1), $element: entrance);
 }
 
 .middleSection {
-    @include menuStyleSection($margin_on: false, $padding: 1.2rem, $element: middle);
+    @include menuStyleSection($margin_on: false, $padding: nth($paddBlocMenu, 1), $element: middle);
 }
 
 .dessertSection {
-    @include menuStyleSection($margin_on: false, $padding: 1.2rem, $element: dessert);
+    @include menuStyleSection($margin_on: false, $padding: nth($paddBlocMenu, 1), $element: dessert);
 }
 
 .containerButton {

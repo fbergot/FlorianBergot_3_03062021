@@ -50,36 +50,57 @@ table {
   border-spacing: 0;
 }
 
-/*Fin reset et html elements*/
-* {
-  box-sizing: border-box;
+@keyframes displayNone {
+  100% {
+    visibility: hidden;
+  }
 }
-
-html, body {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  position: relative;
-}
-
-main {
-  opacity: 0;
-  animation: visibilityOk 7.5s 1 forwards;
-}
-@keyframes visibilityOk {
+@keyframes spinner1 {
   0% {
-    opacity: 0;
+    transform: rotate(0);
+    border-width: 22px;
   }
   50% {
-    opacity: 0;
+    border-width: 1px;
   }
   100% {
-    opacity: 1;
+    transform: rotate(360deg);
+    border-width: 22px;
   }
 }
-
+@keyframes spinner2 {
+  0% {
+    transform: rotate(0);
+    border-width: 5px;
+  }
+  50% {
+    transform: rotate(360deg);
+    border-width: 2px;
+    top: -30px;
+    height: 260px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 5px;
+  }
+}
+@keyframes spinner2 {
+  0% {
+    transform: rotate(0);
+    border-width: 5px;
+  }
+  50% {
+    transform: rotate(360deg);
+    border-width: 2px;
+    top: -30px;
+    height: 260px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 5px;
+  }
+}
+/*end mixin and layout*/
 .spinnerContainer {
   position: absolute;
   top: 40vh;
@@ -120,40 +141,35 @@ main {
   animation: spinner2 2 2s;
 }
 
-@keyframes spinner1 {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+main {
+  opacity: 0;
+  animation: visibilityOk 7.5s 1 forwards;
+}
+@keyframes visibilityOk {
   0% {
-    transform: rotate(0);
-    border-width: 22px;
+    opacity: 0;
   }
   50% {
-    border-width: 1px;
+    opacity: 0;
   }
   100% {
-    transform: rotate(360deg);
-    border-width: 22px;
+    opacity: 1;
   }
 }
-@keyframes spinner2 {
-  0% {
-    transform: rotate(0);
-    border-width: 5px;
-  }
-  50% {
-    transform: rotate(360deg);
-    border-width: 2px;
-    top: -30px;
-    height: 260px;
-  }
-  100% {
-    transform: rotate(360deg);
-    border-width: 5px;
-  }
-}
-@keyframes displayNone {
-  100% {
-    visibility: hidden;
-  }
-}
+
 .header div {
   display: flex;
   justify-content: center;
@@ -328,8 +344,8 @@ main {
   justify-content: center;
   align-items: center;
   margin: auto;
-  top: 20px;
-  right: 20px;
+  top: 1rem;
+  right: 1rem;
   width: 100px;
   padding: 0;
 }

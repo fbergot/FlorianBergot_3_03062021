@@ -1,0 +1,7 @@
+@mixin displayNoneSpinner {
+    @keyframes displayNone {
+        100% {
+            visibility: hidden;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@mixin spinner1 {
+    @keyframes spinner1 {
+        0% {
+            transform: rotate(0);
+            border-width: 22px;
+        }
+
+        50% {
+            border-width: 1px;
+
+        }
+
+        100% {
+            transform: rotate(360deg);
+            border-width: 22px;
+        }
+    }
+}

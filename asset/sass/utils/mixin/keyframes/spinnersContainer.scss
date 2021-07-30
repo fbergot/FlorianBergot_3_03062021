@@ -1,0 +1,50 @@
+@include displayNoneSpinner;
+@include spinner1;
+@include spinner2;
+@include spinner2;
+
+
+@mixin spinnersContainer {
+    .spinnerContainer {
+        position: absolute;
+        top: 40vh;
+        left: 50vw;
+        z-index: 5;
+        transform: translateX(-50%);
+        animation: displayNone 4s 1 forwards;
+        transition: 1s;
+
+        div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 20px solid transparent;
+            border-radius: 50%;
+            border-top-color: $primaryColorPurple;
+            border-right-color: $tertiaryColorBlue;
+            border-bottom-color: $secondaryColorPink;
+            border-left-color: $tertiaryColorBlue;
+            animation: spinner1 2 2s;
+
+            p {
+                font-family: $fontShrikhand;
+            }        
+        }
+
+        div:nth-child(2) {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 200px;
+            height: 240px;
+            border: 5px solid transparent;
+            border-radius: 50%;
+            border-top-color: darken($greyColor,20);
+            border-bottom-color: darken($greyColor,20);
+            animation: spinner2 2 2s;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@mixin hoverCardAnim {
+    &:hover .card__anim  {
+        width: 5.5em;
+        margin-left: 10px;
+        
+    }
+    
+    &:hover .card__anim i {
+        transform: rotate(360deg);
+    }
+    
+    &:hover .card__container1 .card__p{
+        margin-right: -80px;
+        max-width: 85%;
+        
+    }
+
+    &:hover .card__container1 .card__cont p {
+        margin-right: -80px;
+        max-width: 78%;
+    }
+}

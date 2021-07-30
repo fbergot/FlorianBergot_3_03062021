@@ -13,8 +13,16 @@
 @import "./utils/mixin/heartAnim";
 @import "./utils/mixin/imgGeneral";
 @import "./utils/mixin/keyframes/mainVisibilityKeyframes";
+// mixin spinner
+@import "./utils/mixin/keyframes/displayNoneSpinner";
+@import "./utils/mixin/keyframes/spinner1";
+@import "./utils/mixin/keyframes/spinner2";
+@import "./utils/mixin/keyframes/spinnersContainer";
 
-/*Fin reset et html elements*/
+/*end mixin and layout*/
+
+// spinner (include all mixin spinner)
+@include spinnersContainer;
 
 * {
     box-sizing: border-box;
@@ -31,95 +39,6 @@ body {
 
 main {
     @include mainVisibilityKeyframes;
-}
-
-
-
-
-.spinnerContainer {
-    position: absolute;
-    top: 40vh;
-    left: 50vw;
-    z-index: 5;
-    transform: translateX(-50%);
-    animation: displayNone 4s 1 forwards;
-    transition: 1s;
-
-    div:nth-child(1) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 200px;
-        height: 200px;
-        border: 20px solid transparent;
-        border-radius: 50%;
-        border-top-color: $primaryColorPurple;
-        border-right-color: $tertiaryColorBlue;
-        border-bottom-color: $secondaryColorPink;
-        border-left-color: $tertiaryColorBlue;
-        animation: spinner1 2 2s;
-
-        p {
-            font-family: $fontShrikhand;
-        }        
-    }
-
-    div:nth-child(2) {
-        position: absolute;
-        top: -20px;
-        left: 0;
-        width: 200px;
-        height: 240px;
-        border: 5px solid transparent;
-        border-radius: 50%;
-        border-top-color: darken($greyColor,20);
-        border-bottom-color: darken($greyColor,20);
-        animation: spinner2 2 2s;
-    }
-}
-
-@keyframes spinner1 {
-    0% {
-        transform: rotate(0);
-        border-width: 22px;
-    }
-
-    50% {
-        border-width: 1px;
-
-    }
-
-    100% {
-        transform: rotate(360deg);
-        border-width: 22px;
-    }
-}
-
-@keyframes spinner2 {
-    0% {
-        transform: rotate(0);
-        border-width: 5px;
-    }
-
-    50% {
-        transform: rotate(360deg);
-        border-width: 2px;
-        top: -30px;
-        height: 260px;
-
-    }
-
-    100% {
-        transform: rotate(360deg);
-        border-width: 5px;
-    }
-}
-
-@keyframes displayNone {
-    100% {
-        visibility: hidden;
-    }
 }
 
 .header {
@@ -187,7 +106,6 @@ main {
 // --------------------sectionOperation
 
 .sectionOperation {
-    // border: 1px solid black;
     padding: 1.2rem nth($right,1) 1.2rem nth($left,1);
     margin-top: 20px;
 
@@ -198,8 +116,7 @@ main {
 
     .sectionOperation__container {
         display: flex;
-        flex-direction: column;
-      
+        flex-direction: column;      
     }
 }
 
@@ -299,10 +216,11 @@ main {
                 justify-content: center;
                 align-items: center;
                 margin: auto;
-                top: 20px;
-                right: 20px;
+                top: 1rem;
+                right: 1rem;
                 width: 100px;
                 padding: 0;
+
                 p {
                     padding: 0.5rem;
                     text-align: center;
