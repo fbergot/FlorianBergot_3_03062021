@@ -1,0 +1,23 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "projet 3 openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "compile_page_acceuil": "sass asset/sass/style.scss asset/css/style.css --watch",
+    "compile_page_menu": "sass asset/sass/menuStyle.scss asset/css/menuStyle.css --watch",
+    "prefix_acceuil": "postcss asset/css/style.css --use autoprefixer -d asset/css/prefix",
+    "prefix_menu": "postcss asset/css/menuStyle.css --use autoprefixer -d asset/css/prefix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbergot/FlorianBergot_3_03062021.git"
+  },
+  "author": "florian.bergot564@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fbergot/FlorianBergot_3_03062021/issues"
+  },
+  "homepage": "https://github.com/fbergot/FlorianBergot_3_03062021#readme",
+  "browserslist": "last 4 versions"
+}
